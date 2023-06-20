@@ -9,5 +9,24 @@ public class ObjectMove : MonoBehaviour
     void Update(){
         float x = this.transform.position.x;
         float y = this.transform.position.y;
+        
+        if(y>=2f)
+        {
+            step = 1;
+        }
+        /*if ()
+        {
+
+        }
+        if ()
+        {
+
+        }*/
+        switch (step)
+        {
+            case 1: this.transform.position += new Vector3(0, 2f*Time.deltaTime, 0); break;
+            case 2: break;
+            case 3: break;
+        }
     }
 }
