@@ -37,6 +37,35 @@ public class PlayerMove : MonoBehaviour
                 player.transform.position += new Vector3(3 * Time.deltaTime, 0, 0);
             }
         }
+
+        if (step == 3)
+        {
+            if (player.transform.position.y >= 3f)
+            {
+                step = 0;
+            }
+            else
+            {
+                player.transform.position += new Vector3(0, 3 * Time.deltaTime, 0);
+            }
+        }
+
+        if (step == 4)
+        {
+            if (player.transform.position.y <= -2f)
+            {
+                step = 0;
+            }
+            else
+            {
+                player.transform.position -= new Vector3(0, 3 * Time.deltaTime, 0);
+            }
+        }
+
+        if (player.transform.position.y >= 3f && step != 0)
+        {
+            step = 0;
+        }
     }
     public void LeftMove()
     {
@@ -46,5 +75,19 @@ public class PlayerMove : MonoBehaviour
     public void RightMove()
     {
         step = 2;
+    }
+
+    public void UpMove()
+    {
+        if (player.transform.position.y < 3f)
+        {
+            step = 3;
+        }
+        
+    }
+
+    public void DownMove()
+    {
+        step = 4;
     }
 }
