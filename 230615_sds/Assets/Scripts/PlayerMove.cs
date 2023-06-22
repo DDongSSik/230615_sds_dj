@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//메소드 = 함수, 클래스 =  레시피, 인스턴스화(객체화) = 클래스를 실체화 하는 것.
+//함수 = 
+
 public class PlayerMove : MonoBehaviour
 {
     public GameObject player;
