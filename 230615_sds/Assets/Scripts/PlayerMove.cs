@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(step);
+        //Debug.Log(step);
         if (step == 1)
         {
             if (player.transform.position.x <= -2f)
